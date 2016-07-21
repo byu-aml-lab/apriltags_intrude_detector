@@ -76,6 +76,7 @@ include_directories(include ${catkin_INCLUDE_DIRS}
 add_executable(apriltags_intrude_detector src/apriltags_intrude_detector.cpp
                                           src/apriltags_intrude_detector_demo.cpp
               )
+add_dependencies(apriltags_intrude_detector apriltags_intrude_detector_gencpp)
 target_link_libraries(apriltags_intrude_detector ${catkin_LIBRARIES} 
                                                  ${OpenCV_LIBRARIES}
                                                  ${CGAL_LIBRARIES}
